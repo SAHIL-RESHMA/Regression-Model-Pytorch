@@ -1,7 +1,7 @@
 """
-📈 Regression Model using PyTorch
+Regression Model using PyTorch
 
-This script builds and trains a simple linear regression model using PyTorch
+This script builds and trains a linear regression model using PyTorch
 to predict continuous outcomes from synthetic data.
 
 Key Features:
@@ -13,7 +13,7 @@ Key Features:
 """
 
 # ==============================================================================
-# 📦 Imports
+# Import Modules
 # ==============================================================================
 import torch
 from torch import nn
@@ -21,14 +21,14 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # ==============================================================================
-# ⚙️ Configuration
+# Configuration
 # ==============================================================================
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 SEED = 42
 torch.manual_seed(SEED)
 
 # ==============================================================================
-# 📊 Data Generation
+# Data Generation
 # ==============================================================================
 def generate_data(start=0, stop=1, step=0.02, slope=0.7, bias=0.3):
     """Generates synthetic linear data."""
@@ -42,7 +42,7 @@ def split_data(X, y, train_ratio=0.8):
     return X[:split_idx], y[:split_idx], X[split_idx:], y[split_idx:]
 
 # ==============================================================================
-# 📉 Visualization Utility
+# Visualization Utility
 # ==============================================================================
 def plot_predictions(train_data, train_labels, test_data, test_labels, preds=None):
     """Visualizes training, test, and predicted values."""
@@ -58,7 +58,7 @@ def plot_predictions(train_data, train_labels, test_data, test_labels, preds=Non
     plt.show()
 
 # ==============================================================================
-# 🧠 Linear Regression Model
+# Linear Regression Model
 # ==============================================================================
 class LinearRegressionModel(nn.Module):
     """Single-layer linear regression model."""
@@ -70,7 +70,7 @@ class LinearRegressionModel(nn.Module):
         return self.linear(x)
 
 # ==============================================================================
-# 🔁 Training Function
+# Training Function
 # ==============================================================================
 def train(model, X_train, y_train, X_test, y_test, epochs=200, lr=0.01):
     """Trains the regression model."""
@@ -97,13 +97,13 @@ def train(model, X_train, y_train, X_test, y_test, epochs=200, lr=0.01):
     return model
 
 # ==============================================================================
-# 💾 Save & Load Model
+# Save & Load Model
 # ==============================================================================
 def save_model(model, path="model/regression_model.pth"):
     """Saves model state_dict to disk."""
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     torch.save(model.state_dict(), path)
-    print(f"✅ Model saved to: {path}")
+    print(f"Model saved to: {path}")
 
 def load_model(path="model/regression_model.pth"):
     """Loads model from saved state_dict."""
@@ -114,7 +114,7 @@ def load_model(path="model/regression_model.pth"):
     return model
 
 # ==============================================================================
-# 🚀 Main Execution
+# Main Execution
 # ==============================================================================
 if __name__ == "__main__":
     # Generate and prepare data
