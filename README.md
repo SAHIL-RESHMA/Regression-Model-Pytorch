@@ -1,10 +1,10 @@
-# 🔢 Linear Regression Model with PyTorch
+# Linear Regression Model with PyTorch
 
 This project implements a **linear regression model using PyTorch**, designed to predict continuous values from input data by learning a simple linear relationship. It demonstrates end-to-end model development, including data generation, training, evaluation, visualization, and model persistence.
 
 ---
 
-## 📌 Key Features
+## Key Features
 
 - Developed with **PyTorch**, utilizing its `nn.Module`, `L1Loss`, and optimization APIs.
 - Trains a custom **linear regression model** from scratch.
@@ -14,7 +14,7 @@ This project implements a **linear regression model using PyTorch**, designed to
 
 ---
 
-## 🧠 Project Objective
+## Project Objective
 
 The goal of this project is to:
 - Generate a **synthetic dataset** with a known linear relationship.
@@ -25,7 +25,7 @@ The goal of this project is to:
 
 ---
 
-## 📂 Dataset Overview
+## Dataset Overview
 
 This project does not rely on external datasets. It uses **synthetically generated data**:
 
@@ -37,7 +37,7 @@ This project does not rely on external datasets. It uses **synthetically generat
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. **Data Preparation**
    - Generate data using `torch.arange` and apply a linear function with optional noise.
@@ -67,14 +67,14 @@ This project does not rely on external datasets. It uses **synthetically generat
 
 ---
 
-## 📊 Libraries Used
+## Libraries Used
 
 - [`torch`](https://pytorch.org/) — Deep learning framework
 - [`matplotlib`](https://matplotlib.org/) — Visualization library
 
 ---
 
-## 💼 Real-World Applications
+## Real-World Applications
 
 - **Finance**: Predict stock prices, trends, or interest rates.  
 - **Marketing**: Estimate campaign ROI or customer lifetime value.  
